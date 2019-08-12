@@ -34,7 +34,14 @@ body {
 ol, ul {
 	list-style: none;
 }
-
+.pricinginfo {
+	float: right; 
+	margin-top: -12rem;
+}
+.pricinginfo span {
+	color: #999;
+	margin-right: 10rem;
+}
 blockquote, q {
 	quotes: none;
 }
@@ -3108,7 +3115,7 @@ input, select, textarea {
 		}
 
 		.image.left, .image.right {
-			max-width: 45%;
+			max-width: 35%;
 		}
 
 			.image.left img, .image.right img {
