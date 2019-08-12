@@ -4881,10 +4881,9 @@ input, select, textarea {
 /* Footer */
 
 	#footer {
-		background-color: #6eb792;
 		color: rgba(255, 255, 255, 0.75);
 		padding: 7.5em 0 5.5em 0 ;
-		background-color: #6eb792;
+		background-color: #37413c;
 	}
 
 		#footer input, #footer select, #footer textarea {
