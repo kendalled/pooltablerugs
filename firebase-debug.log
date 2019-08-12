@@ -1,0 +1,119 @@
+[debug] [2019-08-12T17:51:18.678Z] ----------------------------------------------------------------------
+[debug] [2019-08-12T17:51:18.679Z] Command:       /Users/kendall/.nvm/versions/node/v8.16.0/bin/node /Users/kendall/.nvm/versions/node/v8.16.0/bin/firebase deploy
+[debug] [2019-08-12T17:51:18.679Z] CLI Version:   7.2.2
+[debug] [2019-08-12T17:51:18.679Z] Platform:      darwin
+[debug] [2019-08-12T17:51:18.679Z] Node Version:  v8.16.0
+[debug] [2019-08-12T17:51:18.680Z] Time:          Mon Aug 12 2019 13:51:18 GMT-0400 (EDT)
+[debug] [2019-08-12T17:51:18.680Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2019-08-12T17:51:18.685Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2019-08-12T17:51:18.685Z] > authorizing via signed-in user
+[debug] [2019-08-12T17:51:18.686Z] [iam] checking project pooltablerugs for permissions ["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","datastore.indexes.create","datastore.indexes.delete","datastore.indexes.list","datastore.indexes.update","firebase.projects.get","firebasehosting.sites.update","firebaserules.releases.create","firebaserules.releases.update","firebaserules.rulesets.create"]
+[debug] [2019-08-12T17:51:18.687Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/pooltablerugs:testIamPermissions  
+
+[debug] [2019-08-12T17:51:18.973Z] <<< HTTP RESPONSE 200
+[debug] [2019-08-12T17:51:18.975Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/pooltablerugs  
+ 
+[debug] [2019-08-12T17:51:19.241Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Deploying to 'pooltablerugs'...
+[info] 
+[info] i  deploying storage, firestore, functions, hosting
+[info] Running command: npm --prefix "$RESOURCE_DIR" run lint
+[info] ✔  functions: Finished running predeploy script.
+[debug] [2019-08-12T17:51:21.163Z] >>> HTTP REQUEST GET https://appengine.googleapis.com/v1/apps/pooltablerugs  
+ 
+[debug] [2019-08-12T17:51:21.713Z] <<< HTTP RESPONSE 200
+[info] i  storage: checking storage.rules for compilation errors...
+[debug] [2019-08-12T17:51:21.715Z] >>> HTTP REQUEST POST https://firebaserules.googleapis.com/v1/projects/pooltablerugs:test  
+
+[debug] [2019-08-12T17:51:22.022Z] <<< HTTP RESPONSE 200
+[info] ✔  storage: rules file storage.rules compiled successfully
+[info] i  firestore: checking firestore.rules for compilation errors...
+[info] i  firestore: reading indexes from firestore.indexes.json...
+[debug] [2019-08-12T17:51:22.026Z] >>> HTTP REQUEST POST https://firebaserules.googleapis.com/v1/projects/pooltablerugs:test  
+
+[debug] [2019-08-12T17:51:22.244Z] <<< HTTP RESPONSE 200
+[info] ✔  firestore: rules file firestore.rules compiled successfully
+[debug] [2019-08-12T17:51:22.247Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "lint": "eslint .",
+    "serve": "firebase serve --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "8"
+  },
+  "dependencies": {
+    "firebase-admin": "^8.0.0",
+    "firebase-functions": "^3.1.0"
+  },
+  "devDependencies": {
+    "eslint": "^5.12.0",
+    "eslint-plugin-promise": "^4.0.1",
+    "firebase-functions-test": "^0.1.6"
+  },
+  "private": true
+}
+[info] i  functions: ensuring necessary APIs are enabled...
+[debug] [2019-08-12T17:51:22.247Z] >>> HTTP REQUEST GET https://serviceusage.googleapis.com/v1/projects/pooltablerugs/services/cloudfunctions.googleapis.com  
+ 
+[debug] [2019-08-12T17:51:22.248Z] >>> HTTP REQUEST GET https://serviceusage.googleapis.com/v1/projects/pooltablerugs/services/runtimeconfig.googleapis.com  
+ 
+[debug] [2019-08-12T17:51:22.739Z] <<< HTTP RESPONSE 200
+[debug] [2019-08-12T17:51:22.786Z] <<< HTTP RESPONSE 200
+[info] ✔  functions: all necessary APIs are enabled
+[debug] [2019-08-12T17:51:22.788Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/pooltablerugs/adminSdkConfig  
+ 
+[debug] [2019-08-12T17:51:23.063Z] <<< HTTP RESPONSE 200
+[debug] [2019-08-12T17:51:23.066Z] >>> HTTP REQUEST POST https://firebasehosting.googleapis.com/v1beta1/sites/pooltablerugs/versions  
+
+[debug] [2019-08-12T17:51:23.856Z] <<< HTTP RESPONSE 200
+[info] i  storage: uploading rules storage.rules...
+[debug] [2019-08-12T17:51:23.859Z] >>> HTTP REQUEST POST https://firebaserules.googleapis.com/v1/projects/pooltablerugs/rulesets  
+
+[debug] [2019-08-12T17:51:24.235Z] <<< HTTP RESPONSE 200
+[debug] [2019-08-12T17:51:24.235Z] [rules] created ruleset projects/pooltablerugs/rulesets/9fd07a22-1b8b-4201-8f14-a58825fc7f85
+[info] i  firestore: uploading rules firestore.rules...
+[debug] [2019-08-12T17:51:24.238Z] >>> HTTP REQUEST POST https://firebaserules.googleapis.com/v1/projects/pooltablerugs/rulesets  
+
+[debug] [2019-08-12T17:51:24.239Z] >>> HTTP REQUEST GET https://firestore.googleapis.com/v1beta2/projects/pooltablerugs/databases/(default)/collectionGroups/-/indexes  
+ 
+[debug] [2019-08-12T17:51:24.661Z] <<< HTTP RESPONSE 200
+[debug] [2019-08-12T17:51:24.662Z] >>> HTTP REQUEST GET https://firestore.googleapis.com/v1beta2/projects/pooltablerugs/databases/(default)/collectionGroups/-/fields?filter=indexConfig.usesAncestorConfig=false  
+ 
+[debug] [2019-08-12T17:51:25.021Z] <<< HTTP RESPONSE 200
+[info] ✔  firestore: deployed indexes in firestore.indexes.json successfully
+[debug] [2019-08-12T17:51:25.656Z] <<< HTTP RESPONSE 200
+[debug] [2019-08-12T17:51:25.656Z] [rules] created ruleset projects/pooltablerugs/rulesets/d76da79f-7909-48aa-8cc9-6be094be3f05
+[info] i  functions: preparing functions directory for uploading...
+[debug] [2019-08-12T17:51:25.661Z] >>> HTTP REQUEST GET https://runtimeconfig.googleapis.com/v1beta1/projects/pooltablerugs/configs  
+ 
+[debug] [2019-08-12T17:51:26.034Z] <<< HTTP RESPONSE 200
+[info] i  hosting[pooltablerugs]: beginning deploy...
+[info] i  hosting[pooltablerugs]: found 65 files in public
+[debug] [2019-08-12T17:51:26.169Z] [hosting] hash cache [cHVibGlj] load error: lines is not defined
+[debug] [2019-08-12T17:51:26.248Z] [hosting] hash cache [cHVibGlj] stored for 65 files
+[debug] [2019-08-12T17:51:26.249Z] [hosting][hash queue][FINAL]
+[debug] [2019-08-12T17:51:26.249Z] >>> HTTP REQUEST POST https://firebasehosting.googleapis.com/v1beta1/sites/pooltablerugs/versions/d02ce0bf76c10573:populateFiles  
+ <request body omitted>
+[debug] [2019-08-12T17:51:27.850Z] <<< HTTP RESPONSE 200
+[debug] [2019-08-12T17:51:27.852Z] [hosting][populate queue][FINAL]
+[debug] [2019-08-12T17:51:27.852Z] [hosting] uploads queued: 1
+[debug] [2019-08-12T17:51:29.209Z] [hosting][upload queue][FINAL]
+[info] ✔  hosting[pooltablerugs]: file upload complete
+[debug] [2019-08-12T17:51:29.210Z] [hosting] deploy completed after 3058ms
+[debug] [2019-08-12T17:51:29.688Z] [rules] releasing firebase.storage/pooltablerugs.appspot.com with ruleset projects/pooltablerugs/rulesets/9fd07a22-1b8b-4201-8f14-a58825fc7f85
+[debug] [2019-08-12T17:51:29.688Z] >>> HTTP REQUEST PATCH https://firebaserules.googleapis.com/v1/projects/pooltablerugs/releases/firebase.storage/pooltablerugs.appspot.com  
+
+[debug] [2019-08-12T17:51:30.097Z] <<< HTTP RESPONSE 200
+[debug] [2019-08-12T17:51:30.097Z] [rules] updated release projects/pooltablerugs/releases/firebase.storage/pooltablerugs.appspot.com
+[info] ✔  storage: released rules storage.rules to firebase.storage/pooltablerugs.appspot.com
+[debug] [2019-08-12T17:51:30.098Z] [rules] releasing cloud.firestore with ruleset projects/pooltablerugs/rulesets/d76da79f-7909-48aa-8cc9-6be094be3f05
+[debug] [2019-08-12T17:51:30.098Z] >>> HTTP REQUEST PATCH https://firebaserules.googleapis.com/v1/projects/pooltablerugs/releases/cloud.firestore  
+
