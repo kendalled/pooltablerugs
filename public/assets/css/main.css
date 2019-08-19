@@ -4722,6 +4722,16 @@ input, select, textarea {
 				box-shadow: none;
 				background-color: #ffffff;
 				color: #1b7548 !important;
+				transition: .2s all;
+			}
+			/* stripe hvr effect */
+			#banner input[type="submit"].primary:hover,
+			#banner input[type="reset"].primary:hover,
+			#banner input[type="button"].primary:hover,
+			#banner button.primary:hover,
+			#banner .button.primary:hover{
+    			transform: translateY(-1px);
+    			box-shadow: 0 7px 14px rgba(50,50,93,.1),0 3px 6px rgba(0,0,0,.08);
 			}
 
 				#banner input[type="submit"].primary.icon:before,
