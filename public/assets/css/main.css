@@ -4647,7 +4647,7 @@ input, select, textarea {
 		border-top: solid 10px #1b7548;
 		min-height: 75vh;
 		position: relative;
-		text-align: center;
+		text-align: left;
 		width: 100%;
 	}
 
@@ -4753,6 +4753,15 @@ input, select, textarea {
 			z-index: 1;
 			padding: 1.25rem .75rem .75rem .75rem;
 			border-radius: 6px;
+			
+		}
+		@media screen and (min-width:1145px) {
+			#banner > .inner {
+				margin-right: 25%;
+			}
+			ul.actions.special {
+				justify-content: start;
+			}
 		}
 
 		#banner .icon {
